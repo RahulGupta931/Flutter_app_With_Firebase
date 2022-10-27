@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "149563325622",
+    "project_id": "login-signup-authenticat-dab47",
+    "storage_bucket": "login-signup-authenticat-dab47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149563325622:android:0998638622469a47357a17",
+        "android_client_info": {
+          "package_name": "com.example.flutter_music_api"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149563325622-1egg9t8m69pmhan33kfj8krsj247n779.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfCsRNdbI4IlsAzPjkpfBUhc4a0BipCsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149563325622-1egg9t8m69pmhan33kfj8krsj247n779.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
