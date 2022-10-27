@@ -12,7 +12,7 @@ A mobile application with clean UI design. Full authentication support using Fir
 <img src="https://user-images.githubusercontent.com/113452509/198181774-df6fb8aa-d5e5-4d65-9cf0-46bb2cc7c8bd.png"  width="300" height="600">
 <img src="https://user-images.githubusercontent.com/113452509/198181780-37eedb75-4c70-496f-9610-42829eca3878.png"  width="300" height="600">
 <img src="https://user-images.githubusercontent.com/113452509/198181783-9d913e5f-e8e8-4c1a-8fa1-fc9ca70926a7.png"  width="300" height="600">
-<img src="https://user-images.githubusercontent.com/113452509/198181785-1293106f-7b89-4c7f-b5c1-938d492f6862.png"  width="300" height="600">
+<img src="https://user-images.githubusercontent.com/113452509/198329734-6c937898-2099-4ad1-93e5-57f51bb759f1.png"  width="300" height="600">
 
 
 </div>
