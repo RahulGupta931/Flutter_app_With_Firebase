@@ -1,8 +1,8 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -31,6 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
   CollectionReference detail =
       FirebaseFirestore.instance.collection('ueserdetails');
 
+  //for add of current date & location on firebase.
   Future<void> addUser() {
     String Detail =
         DateFormat('dd-MM-yy time: KK:mm: a').format(DateTime.now());
@@ -48,11 +49,24 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
 //for take current location
-  void getCurrentLocation() async {
+  Future<String?> getCurrentLocation() async {
     var position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
     var lastPosition = await Geolocator.getLastKnownPosition();
     locationMessage = "${position.latitude}, ${position.longitude}";
+    double latitude = position.latitude;
+    double longitude = position.longitude;
+    var _currentAddress = "";
+    try {
+      List<Placemark> placmark = await GeocodingPlatform.instance
+          .placemarkFromCoordinates(latitude, longitude);
+      Placemark? place = placmark[0];
+      _currentAddress =
+          '${place.street},${place.country},${place.locality},${place.subLocality}';
+    } catch (e) {
+      print(e);
+    }
+    return _currentAddress;
   }
   //
 
@@ -222,7 +236,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Future signIn() async {
-    getCurrentLocation();
+    await getCurrentLocation();
     addUser();
     showDialog(
         context: context,
